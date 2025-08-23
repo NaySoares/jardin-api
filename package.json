@@ -1,0 +1,35 @@
+{
+  "name": "jardin-api",
+  "version": "1.0.0",
+  "main": "src/server.ts",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NaySoares/jardin-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NaySoares/jardin-api/issues"
+  },
+  "homepage": "https://github.com/NaySoares/jardin-api#readme",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "^6.14.0",
+    "express": "^5.1.0",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.2.2",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.0",
+    "eslint": "^8.57.1",
+    "prisma": "^6.14.0",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^4.20.4",
+    "typescript": "^5.9.2"
+  }
+}
