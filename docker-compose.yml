@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  jardin-db:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=jardin
+      - POSTGRES_USER=jardin
+      - POSTGRES_PASSWORD=jardin
