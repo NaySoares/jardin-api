@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { createRentalUseCase } from "../useCase/createRentalUseCase";
+import { createRentalUseCase } from "../UseCase/ListAvailableGardensUseCase";
 
 export const createRentalController = async (req: Request, res: Response) => {
   try {
