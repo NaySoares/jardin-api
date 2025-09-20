@@ -1,10 +1,26 @@
-import { Garden } from 'generated/prisma'
+import { PrismaClient } from "@prisma/client";
 
-interface IGardensRepository {
-  // create(data: ICreateGardenDTO): Promise<Garden>
-  // findById(id: string): Promise<Garden>
-  // findAvailable(name?: string, status?: boolean): Promise<Garden[]>
-  findAll(): Promise<Garden[]>
+const prisma = new PrismaClient();
+
+interface CreateRentalDTO {
+  customerId: string;
+  carId: string;
+  startDate: string;
+  endDate: string;
+  price: number;
 }
 
-export { IGardensRepository }
+export const rentalRepository = {
+  create: async (data: CreateRentalDTO) => {
+    return await prisma.rental.create({
+      data: {
+        customerId: data.customerId,
+        carId: data.carId,
+        startDate: new Date(data.startDate),
+        endDate: new Date(data.endDate),
+        price: data.price,
+        status: "ativo",
+      },
+    });
+  },
+};

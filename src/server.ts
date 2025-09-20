@@ -1,3 +1,9 @@
-import { app } from './app'
+import express from "express";
+import { rentalRoutes } from "./routes/rental.routes";
 
-app.listen(3333, () => console.log('Server is running on port 3333!'))
+const app = express();
+
+app.use(express.json());
+app.use("/api", rentalRoutes);
+
+app.listen(3000, () => console.log(" API rodando na porta 3000"));
