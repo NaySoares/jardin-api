@@ -1,23 +1,17 @@
-import { inject, injectable } from 'tsyringe'
+import { rentalRepository } from "../repositories/rentalRepository";
 
-import { IGardensRepository } from 'repositories/IGardensRepository'
-import { Garden } from 'generated/prisma'
-
-@injectable()
-class ListAvailableGardensUseCase {
-  // eslint-disable-next-line no-useless-constructor
-  constructor(
-    @inject('IGardensRepository')
-    private gardensRepository: IGardensRepository,
-  ) {
-    /* nothing */
-  }
-
-  async execute(): Promise<Garden[]> {
-    const gardens = await this.gardensRepository.findAll()
-
-    return gardens
-  }
+interface CreateRentalDTO {
+  customerId: string;
+  carId: string;
+  startDate: string;
+  endDate: string;
+  price: number;
 }
 
-export { ListAvailableGardensUseCase }
+export const createRentalUseCase = async (data: CreateRentalDTO) => {
+  if (new Date(data.startDate) >= new Date(data.endDate)) {
+    throw new Error("A data de início deve ser antes da data de fim!");
+  }
+
+  return await rentalRepository.create(data);
+};
