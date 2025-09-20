@@ -1,9 +1,8 @@
-import { Request, Response, Router } from 'express'
+import { Router } from "express";
+import { createRentalController } from "../controllers/rentalController";
 
-const rentalRoutes = Router()
+const rentalRoutes = Router();
 
-rentalRoutes.get('/', (req: Request, res: Response) => {
-  res.send('Rental')
-})
+rentalRoutes.post("/rental", createRentalController);
 
-export { rentalRoutes }
+export { rentalRoutes };
