@@ -11,6 +11,7 @@ const app = express()
 app.use(express.json())
 app.use(router)
 
+// a função next não precisa ser usada agora;
 app.use(
   (err: Error, request: Request, response: Response, next: NextFunction) => {
     console.error(err)
