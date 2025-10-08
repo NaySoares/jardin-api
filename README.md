@@ -8,7 +8,7 @@ docker compose up -d
 ```
 
 Sincronizar com as modificações mais recentes no banco.
-````bash
+```bash
 npx prisma migrate dev
 ```
 
