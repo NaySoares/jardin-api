@@ -3,7 +3,7 @@ import { inject, injectable } from 'tsyringe'
 import { AppError } from '@shared/errors/AppError'
 import { ICreateGardenDTO } from 'dtos/ICreateGardenDTO'
 import { Garden, GardenStatus } from 'generated/prisma'
-import { IGardensRepository } from 'repositories/IGardensRepository'
+import { IGardensRepository } from 'repositories/infra/gardens/IGardensRepository'
 
 @injectable()
 class CreateGardenUseCase {

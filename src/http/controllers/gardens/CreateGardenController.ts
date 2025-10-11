@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
 import { container } from 'tsyringe'
-import { CreateGardenUseCase } from 'use-cases/CreateGardenUseCase'
+import { CreateGardenUseCase } from 'use-cases/gardens/CreateGardenUseCase'
 
 class CreateGardenController {
   async handle(request: Request, response: Response): Promise<Response> {

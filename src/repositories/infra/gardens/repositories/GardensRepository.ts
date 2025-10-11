@@ -1,7 +1,7 @@
 import { ICreateGardenDTO } from 'dtos/ICreateGardenDTO'
 import { Garden } from 'generated/prisma'
 import { prisma } from 'lib/prisma'
-import { IGardensRepository } from 'repositories/IGardensRepository'
+import { IGardensRepository } from 'repositories/infra/gardens/IGardensRepository'
 import { injectable } from 'tsyringe'
 
 @injectable()

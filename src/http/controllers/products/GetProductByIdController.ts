@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
 import { container } from 'tsyringe'
-import { GetProductByIdUseCase } from 'use-cases/GetProductByIdUseCase'
+import { GetProductByIdUseCase } from 'use-cases/products/GetProductByIdUseCase'
 
 class GetProductByIdController {
   async handle(request: Request, response: Response): Promise<Response> {

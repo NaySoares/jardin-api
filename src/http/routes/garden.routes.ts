@@ -1,7 +1,7 @@
 import { Router } from 'express'
-import { CreateGardenController } from 'http/controllers/CreateGardenController'
-import { GetGardenByIdController } from 'http/controllers/GetGardenByIdController'
-import { ListAvailableGardensController } from 'http/controllers/ListAvailableGardensController'
+import { CreateGardenController } from 'http/controllers/gardens/CreateGardenController'
+import { GetGardenByIdController } from 'http/controllers/gardens/GetGardenByIdController'
+import { ListAvailableGardensController } from 'http/controllers/gardens/ListAvailableGardensController'
 
 const gardenRoutes = Router()
 
