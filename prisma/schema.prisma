@@ -47,6 +47,7 @@ model Garden {
   description String
   latitude    Decimal
   longitude   Decimal
+  address     String?
   status      GardenStatus
   size        Decimal
   price       Decimal

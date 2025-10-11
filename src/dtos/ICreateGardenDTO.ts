@@ -1,9 +1,14 @@
+type GardenStatus = 'AVAILABLE' | 'RESERVED'
 interface ICreateGardenDTO {
   name: string
   description: string
-  location: string
-  status?: boolean
-  id?: string
+  latitude: number // '-25.4284'
+  longitude: number // '-49.2733'
+  address?: string
+  status?: GardenStatus
+  size: number
+  price: number
+  userId?: number
 }
 
-export { ICreateGardenDTO }
+export { ICreateGardenDTO, GardenStatus }
