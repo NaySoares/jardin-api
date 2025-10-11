@@ -1,13 +1,13 @@
 import { Router } from 'express'
-import { GetGardenByIdController } from 'http/controllers/GetGardenByIdController'
-import { ListAvailableGardensController } from 'http/controllers/ListAvailableGardensController'
+import { GetProductByIdController } from 'http/controllers/GetProductByIdController'
+import { ListAvailableProductsController } from 'http/controllers/ListAvailableProductsController'
 
 const gardenRoutes = Router()
 
-const listAvailableGardensController = new ListAvailableGardensController()
-const getGardenByIdController = new GetGardenByIdController()
+const listAvailableProductsController = new ListAvailableProductsController()
+const getProductByIdController = new GetProductByIdController()
 
-gardenRoutes.get('/', listAvailableGardensController.handle)
-gardenRoutes.get('/:id', getGardenByIdController.handle)
+gardenRoutes.get('/', listAvailableProductsController.handle)
+gardenRoutes.get('/:id', getProductByIdController.handle)
 
 export { gardenRoutes }

@@ -4,7 +4,7 @@ import { IGardensRepository } from 'repositories/IGardensRepository'
 import { Garden } from 'generated/prisma'
 
 @injectable()
-class ListAvailableGardensUseCase {
+class GetProductByIdUseCase {
   // eslint-disable-next-line no-useless-constructor
   constructor(
     @inject('IGardensRepository')
@@ -13,11 +13,11 @@ class ListAvailableGardensUseCase {
     /* nothing */
   }
 
-  async execute(): Promise<Garden[]> {
-    const gardens = await this.gardensRepository.findAll()
+  async execute(id: number): Promise<Garden | null> {
+    const garden = await this.gardensRepository.findById(id)
 
-    return gardens
+    return garden
   }
 }
 
-export { ListAvailableGardensUseCase }
+export { GetProductByIdUseCase }
