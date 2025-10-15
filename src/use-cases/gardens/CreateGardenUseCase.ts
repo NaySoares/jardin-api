@@ -51,7 +51,7 @@ class CreateGardenUseCase {
       status,
       size,
       price,
-      userId: 1, // TODO: pegar o userId do usuário autenticado
+      userId: 'default-user-id', // apenas para testes
     })
   }
 }

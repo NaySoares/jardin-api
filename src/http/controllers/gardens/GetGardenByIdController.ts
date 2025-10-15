@@ -6,8 +6,8 @@ class GetGardenByIdController {
   async handle(request: Request, response: Response): Promise<Response> {
     const { id } = request.params
 
-    if (!id) {
-      return response.status(400).json({ message: 'ID é obrigatório' })
+    if (isNaN(Number(id))) {
+      return response.status(400).json({ message: 'ID inválido' })
     }
 
     const getGardenByIdUseCase = container.resolve(GetGardenByIdUseCase)

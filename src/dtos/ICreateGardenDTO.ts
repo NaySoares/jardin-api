@@ -8,7 +8,7 @@ interface ICreateGardenDTO {
   status?: GardenStatus
   size: number
   price: number
-  userId?: number
+  userId?: string
 }
 
 export { ICreateGardenDTO, GardenStatus }
