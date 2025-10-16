@@ -1,8 +1,11 @@
+type ProductType = 'FRUIT' | 'VEGETABLE' | 'HERB'
 interface ICreateProductDTO {
-  name: string;
-  description: string;
-  price: number;
-  userId?: string;
+  name: string
+  description: string
+  price: number
+  stock: number
+  type: ProductType
+  userId?: string
 }
 
-export { ICreateProductDTO };
+export { ICreateProductDTO, ProductType }
