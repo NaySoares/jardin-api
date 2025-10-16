@@ -11,7 +11,7 @@ const getProductByIdController = new GetProductByIdController()
 const createProductController = new CreateProductController()
 
 productRoutes.get('/', listAvailableProductsController.handle)
-productRoutes.get('/:id', ensureAuthenticated, getProductByIdController.handle)
-productRoutes.post('/', createProductController.handle)
+productRoutes.get('/:id', getProductByIdController.handle)
+productRoutes.post('/', ensureAuthenticated, createProductController.handle)
 
 export { productRoutes }
